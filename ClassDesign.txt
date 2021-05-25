@@ -1,0 +1,104 @@
+Player:
+	description:
+	a container to hold all the player data
+	
+	Interfaces:
+	Properties:
+		name: the players name
+		health: the players health
+		def: how much damage the player can negate
+		weapon: the current weapon the player has equiped
+		armor: the current armor the player has equiped
+		inventory: the Items that the player picks up
+	Constructors:
+		Player(name, health, weapon, armor, inventory)
+	Methods:
+		string ToString() [overide]
+	Notes:
+
+Location:
+	description:
+		a base class to use to make areas from
+	Interfaces:
+		IComparable
+	Properties:
+		name: name of location
+		exits: all the nearby locations
+		dialogue: all the text that the location requires
+		dialoguePos: used to keep a history of where we are in the dialogue for a location
+		actors: what Actors are in the location
+		monsters: what monsters are in the location
+		items: items in the location
+	Constructors:
+		Location(name, exits, dialogue, actors, monsters, items, dialoguePos = 0)
+	Methods:
+		string ToString() [overide]
+	Notes:
+		all locations are derived from this
+Item:
+	description:
+		a base class to make items
+	Interfaces:
+		IComparable
+	Properties:
+		name: items name
+		discription: discription of item
+	Constructors:
+		Item(name)
+	Methods:
+		string ToString() [overide]
+	Notes:
+		all items are derived from this
+Actor:
+	description:
+		a base class to make actors (NPCs) out of
+	Interfaces:
+		IComparable
+	Properties:
+		name: actor's name
+		health: health of actor
+	Constructors:
+		Actor(name, health)
+	Methods:
+		string ToString() [overide]
+	Notes:
+		all Actors are derived from this
+Monster:
+	description:
+		a base class to make monsters from
+	Interfaces:
+		IComparable
+	Properties:
+		name: name of the monster
+		health: health of the monster
+		loot: loot (items) from monster
+		atk: how much damage the monster deals
+		def: how much damage the monster can negate
+	Constructors:
+		Monster(name, health, loot, atk, def)
+	Methods:
+		string ToString() [overide]
+		attack() :to deal damage
+	Notes:
+		all monsters derive from this
+Armor:
+	description:
+		a base class to make armor from
+	Interfaces:
+		IComparable
+	Properties:
+		name: name for armor
+		def: how much def the armor gives
+	Constructors:
+		Armor(name, def)
+	Methods:
+		string ToString() [overide]
+	Notes:
+		all armor is derived from this
+Weapon:
+	description:
+	Interfaces:
+	Properties:
+	Constructors:
+	Methods:
+	Notes:
