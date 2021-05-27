@@ -7,6 +7,7 @@ Player:
 		name: the players name
 		health: the players health
 		def: how much damage the player can negate
+		atk: how much damage the player can inflict
 		weapon: the current weapon the player has equiped
 		armor: the current armor the player has equiped
 		inventory: the Items that the player picks up
@@ -14,6 +15,8 @@ Player:
 		Player(name, health, weapon, armor, inventory)
 	Methods:
 		string ToString() [overide]
+		equipBetterItem(item)
+		itemToInv(item)
 	Notes:
 
 Location:
@@ -97,8 +100,15 @@ Armor:
 		all armor is derived from this
 Weapon:
 	description:
+		a base class to make weapons from
 	Interfaces:
+		IComparable
 	Properties:
+		name: name for the item
+		atk: how much attack this weapon adds to the player
 	Constructors:
+		Weapons()
 	Methods:
+		string ToString() [overide]
 	Notes:
+		all weapons are made from this
