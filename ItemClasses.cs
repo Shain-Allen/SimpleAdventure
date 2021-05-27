@@ -13,8 +13,8 @@ namespace SimpleAdventure
 
 		public Item(string _Name, string _Discription)
 		{
-			name = _Name;
-			discription = _Discription;
+			this.name = _Name;
+			this.discription = _Discription;
 		}
 
 		public int CompareTo(Object item)
@@ -34,9 +34,9 @@ namespace SimpleAdventure
 
 		public Weapon(string _Name, string _Discription, int _Atk)
 		{
-			name = _Name;
-			discription = _Discription;
-			atk = _Atk;
+			this.name = _Name;
+			this.discription = _Discription;
+			this.atk = _Atk;
 		}
 
 		public override string ToString()
@@ -51,9 +51,9 @@ namespace SimpleAdventure
 
 		public Armor(string _Name, string _Discription, int _Def)
 		{
-			name = _Name;
-			discription = _Discription;
-			def = _Def;
+			this.name = _Name;
+			this.discription = _Discription;
+			this.def = _Def;
 		}
 
 		public override string ToString()
