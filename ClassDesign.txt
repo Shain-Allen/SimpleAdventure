@@ -15,7 +15,7 @@ Player:
 		Player(name, health, weapon, armor, inventory)
 	Methods:
 		string ToString() [overide]
-		equipBetterItem(item)
+		equipBetterItem(item, type)
 		itemToInv(item)
 	Notes:
 
