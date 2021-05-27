@@ -38,20 +38,6 @@ Location:
 		string ToString() [overide]
 	Notes:
 		all locations are derived from this
-Item:
-	description:
-		a base class to make items
-	Interfaces:
-		IComparable
-	Properties:
-		name: items name
-		discription: discription of item
-	Constructors:
-		Item(name)
-	Methods:
-		string ToString() [overide]
-	Notes:
-		all items are derived from this
 Actor:
 	description:
 		a base class to make actors (NPCs) out of
@@ -84,30 +70,42 @@ Monster:
 		attack() :to deal damage
 	Notes:
 		all monsters derive from this
-Armor:
+Item:
 	description:
-		a base class to make armor from
+		a base class to make items
 	Interfaces:
 		IComparable
 	Properties:
-		name: name for armor
+		name: items name
+		discription: discription of item
+	Constructors:
+		Item()
+		Item(name discription)
+	Methods:
+		string ToString() [overide]
+		int CompareTo(Object Item) [from IComparable]
+	Notes:
+		all items are derived from this
+Armor: Item
+	description:
+		a base class to make armor from
+	Interfaces:
+	Properties:
 		def: how much def the armor gives
 	Constructors:
-		Armor(name, def)
+		Armor(name, discription, def)
 	Methods:
 		string ToString() [overide]
 	Notes:
 		all armor is derived from this
-Weapon:
+Weapon: Item
 	description:
 		a base class to make weapons from
 	Interfaces:
-		IComparable
 	Properties:
-		name: name for the item
 		atk: how much attack this weapon adds to the player
 	Constructors:
-		Weapons()
+		Weapons(name, discription, atk)
 	Methods:
 		string ToString() [overide]
 	Notes:
