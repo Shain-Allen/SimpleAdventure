@@ -45,7 +45,13 @@ Actor:
 		IComparable
 	Properties:
 		name: actor's name
+		description: description of actor
 		health: health of actor
+		atk: how much damage the actor can deal
+		def: how much damage the actor can deflect
+		weapon: what weapon the actor has equiped
+		armor: what armor the actor has equiped
+		
 	Constructors:
 		Actor(name, health)
 	Methods:
@@ -59,10 +65,14 @@ Monster:
 		IComparable
 	Properties:
 		name: name of the monster
+		description: description of monster
 		health: health of the monster
 		loot: loot (items) from monster
 		atk: how much damage the monster deals
 		def: how much damage the monster can negate
+		weapon: what weapon the Monster has
+		armor: what armor the monster has
+
 	Constructors:
 		Monster(name, health, loot, atk, def)
 	Methods:
@@ -77,7 +87,7 @@ Item:
 		IComparable
 	Properties:
 		name: items name
-		discription: discription of item
+		description: discription of item
 	Constructors:
 		Item()
 		Item(name discription)

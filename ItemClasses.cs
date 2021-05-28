@@ -5,16 +5,16 @@ namespace SimpleAdventure
 	public class Item : IComparable
 	{
 		protected string name;
-		protected string discription;
+		protected string description;
 
 		protected Item()
 		{
 		}
 
-		public Item(string _Name, string _Discription)
+		public Item(string _Name, string _description)
 		{
 			this.name = _Name;
-			this.discription = _Discription;
+			this.description = _description;
 		}
 
 		public int CompareTo(Object item)
@@ -32,10 +32,10 @@ namespace SimpleAdventure
 	{
 		private int atk;
 
-		public Weapon(string _Name, string _Discription, int _Atk)
+		public Weapon(string _Name, string _description, int _Atk)
 		{
 			this.name = _Name;
-			this.discription = _Discription;
+			this.description = _description;
 			this.atk = _Atk;
 		}
 
@@ -49,10 +49,10 @@ namespace SimpleAdventure
 	{
 		private int def;
 
-		public Armor(string _Name, string _Discription, int _Def)
+		public Armor(string _Name, string _description, int _Def)
 		{
 			this.name = _Name;
-			this.discription = _Discription;
+			this.description = _description;
 			this.def = _Def;
 		}
 
