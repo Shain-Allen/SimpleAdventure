@@ -2,7 +2,7 @@ using System;
 
 namespace SimpleAdventure
 {
-	public class Item : IComparable
+	public class Item
 	{
 		protected string name;
 		protected string description;
@@ -15,11 +15,6 @@ namespace SimpleAdventure
 		{
 			this.name = _Name;
 			this.description = _description;
-		}
-
-		public int CompareTo(Object item)
-		{
-			return 0;
 		}
 
 		public override string ToString()

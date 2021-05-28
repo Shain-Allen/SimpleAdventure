@@ -1,7 +1,6 @@
 Player:
 	description:
-	a container to hold all the player data
-	
+		a container to hold all the player data
 	Interfaces:
 	Properties:
 		name: the players name
@@ -18,12 +17,10 @@ Player:
 		equipBetterItem(item, type)
 		itemToInv(item)
 	Notes:
-
 Location:
 	description:
 		a base class to use to make areas from
 	Interfaces:
-		IComparable
 	Properties:
 		name: name of location
 		exits: all the nearby locations
@@ -42,7 +39,6 @@ Actor:
 	description:
 		a base class to make actors (NPCs) out of
 	Interfaces:
-		IComparable
 	Properties:
 		name: actor's name
 		description: description of actor
@@ -51,7 +47,6 @@ Actor:
 		def: how much damage the actor can deflect
 		weapon: what weapon the actor has equiped
 		armor: what armor the actor has equiped
-		
 	Constructors:
 		Actor(name, health)
 	Methods:
@@ -62,7 +57,6 @@ Monster:
 	description:
 		a base class to make monsters from
 	Interfaces:
-		IComparable
 	Properties:
 		name: name of the monster
 		description: description of monster
@@ -84,7 +78,6 @@ Item:
 	description:
 		a base class to make items
 	Interfaces:
-		IComparable
 	Properties:
 		name: items name
 		description: discription of item

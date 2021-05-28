@@ -1,15 +1,15 @@
 using System;
 namespace SimpleAdventure
 {
-	public class Actor : IComparable
+	public class Actor
 	{
-		string name;
-		string description;
-		int health;
-		int atk;
-		int def;
-		Weapon weapon;
-		Armor armor;
+		public string name { get; private set; }
+		public string description { get; private set; }
+		public int health { get; private set; }
+		public int atk { get; private set; }
+		public int def { get; private set; }
+		public Weapon weapon { get; private set; }
+		public Armor armor { get; private set; }
 
 		public Actor(string _Name, string _Description, int _Health, int _Atk, int _Def, Weapon _Weapon, Armor _Armor)
 		{
@@ -22,13 +22,13 @@ namespace SimpleAdventure
 			this.armor = _Armor;
 		}
 
-		public int CompareTo(Object actor)
+		public override string ToString()
 		{
-			return 0;
+			return base.ToString();
 		}
 	}
 
-	public class Monster : IComparable
+	public class Monster
 	{
 		string name;
 		string description;
@@ -51,9 +51,9 @@ namespace SimpleAdventure
 			this.armor = _Armor;
 		}
 
-		public int CompareTo(object monster)
+		public override string ToString()
 		{
-			return 0;
+			return base.ToString();
 		}
 	}
 }
