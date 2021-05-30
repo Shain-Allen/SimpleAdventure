@@ -16,6 +16,7 @@ Player:
 		string ToString() [overide]
 		equipBetterItem(item, type)
 		itemToInv(item)
+		PrintInv(item)
 	Notes:
 Location:
 	description:

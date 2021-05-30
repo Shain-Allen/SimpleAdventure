@@ -7,7 +7,8 @@ namespace SimpleAdventure
 	{
 		static void Main(string[] args)
 		{
-			//Items start
+			//Items
+			Item rabbitsFoot = new Item("Rabbit's Foot", "a Rabbits Foot");
 			Item silverRing = new Item("Silver Ring", "A Silver Ring from a Goblin");
 
 			//Weapons
@@ -19,7 +20,8 @@ namespace SimpleAdventure
 			Armor chainMail = new Armor("Chain Mail", "Chain Mail is better then Leather, thats for sure", 8);
 
 			//Player
-
+			Item[] inv = { rabbitsFoot };
+			Player player = new Player("test name", 20, 0, 0, dagger, leatherArmor, inv);
 
 			//Actors
 
@@ -27,6 +29,8 @@ namespace SimpleAdventure
 			//Monsters
 
 
+
+			Console.WriteLine(player.ToString());
 		}
 	}
 }

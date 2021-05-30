@@ -11,7 +11,7 @@ namespace SimpleAdventure
 		private int atk;
 		private Weapon weapon = null;
 		private Armor armor = null;
-		private List<Item> inventory;
+		private List<Item> inventory = new List<Item>();
 
 
 		public Player(string _Name, int _Health, int _Def, int _Atk, Weapon _weapon, Armor _Armor, Item[] _Inventory)
@@ -30,7 +30,12 @@ namespace SimpleAdventure
 
 		public override string ToString()
 		{
-			return base.ToString();
+			return
+			"-----------------------------------------------------\n" +
+			$"{this.name}	Health:{this.health}\n" +
+			$"Weapon: {this.weapon.ToString()}  Armor: {this.armor.ToString()}\n" +
+			"Inventory: " + PrintInv(this.inventory) +
+			"\n-----------------------------------------------------";
 		}
 
 		public bool EquipBetterItem(Item item, string type)
@@ -63,6 +68,16 @@ namespace SimpleAdventure
 			return true;
 		}
 
+		public string PrintInv(List<Item> inventory)
+		{
+			string inv = "";
 
+			foreach (Item item in inventory)
+			{
+				inv += item.ToString();
+			}
+
+			return inv;
+		}
 	}
 }

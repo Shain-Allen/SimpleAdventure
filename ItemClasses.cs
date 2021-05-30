@@ -19,7 +19,7 @@ namespace SimpleAdventure
 
 		public override string ToString()
 		{
-			return name;
+			return $"[[{name}]]";
 		}
 	}
 
@@ -36,7 +36,7 @@ namespace SimpleAdventure
 
 		public override string ToString()
 		{
-			return name;
+			return $"[{name}({this.atk})]";
 		}
 	}
 
@@ -53,7 +53,7 @@ namespace SimpleAdventure
 
 		public override string ToString()
 		{
-			return name;
+			return $"[{name}({this.def})]";
 		}
 	}
 }
